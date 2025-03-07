@@ -1,9 +1,7 @@
 /* Theme for Jellyfin by teleonline.org */
+/* jsDelivr CDN service’s base URL is https://cdn.jsdelivr.net/gh/{username}/{repo}/ */
 
-/* Add-ons: Uncomment to enable */
-/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
-/* @import url(./assets/add-ons/custom-media-covers-v25.01.25.css); */
-
+/* @import url("https://cdn.jsdelivr.net/gh/teleonlineorg/jellyfin/theme.css"); */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -150,8 +148,8 @@ html {
 }
 
 .cardScalable {
-    border-radius: var(--largeRadius);
-    border: var(--borderColor) solid calc(2 * var(--borderWidth)) !important;
+    border-radius: var(--smallRadius);
+    border: 0 !important;
     overflow: hidden !important;
     transition: transform 125ms;
 }
