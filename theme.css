@@ -1,8 +1,7 @@
-/* Theme for Jellyfin by teleonline.org v5 */
+/* Theme for Jellyfin by teleonline.org v7 */
+/* jsDelivr CDN service’s base URL is https://cdn.jsdelivr.net/gh/{username}/{repo}/ */
 
-/* Add-ons: Uncomment to enable */
-/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
-/* @import url(./assets/add-ons/custom-media-covers-v25.01.25.css); */
+/* @import url("https://cdn.jsdelivr.net/gh/teleonlineorg/jellyfin/theme.css"); */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -20,7 +19,6 @@
     --darkerGradientPointAlpha: rgb(0 0 0 / 85%);
     --lighterGradientPoint: #0a0d12;
     --borderColor: rgb(39 39 39);
-    /* --borderColor: rgb(62 72 85); */
     --lighterBorderColor: rgb(255 255 255 / 20%);
     --headerColor: rgba(30, 40, 54, 0.8);
     --drawerColor: rgba(30, 40, 54, 0.9);
@@ -28,10 +26,6 @@
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
     --btnSubmitColor: rgb(61, 54, 178);
-    --btnSubmitBorderColor: rgb(117 111 226);
-    --checkboxCheckedBgColor: rgb(79, 70, 229);
-    --highlightOutlineColor: rgb(37, 99, 235);
-    --textColor: rgb(209, 213, 219);
     --dimTextColor: rgb(156, 163, 175);
     --activeColorAlpha: rgba(144, 81, 169, 0.4);
     --activeColor: rgb(144, 81, 169);
@@ -41,8 +35,7 @@
     --hoverGradientA: linear-gradient(130deg, rgb(255 255 255 / 35%) 20%, rgb(255 255 255 / 15%) 40%);
     --hoverGradientB: radial-gradient(100% 250% at 90% 190%, rgba(255, 255, 255, 0.15) 85%, rgba(255, 255, 255, 0.33) 100%);
     --shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
-    --largerRadius: 1.25em;
-    --largeRadius: 1em;
+
     --smallRadius: .5em;
     --smallerRadius: .375em;
     --borderWidth: 0.075em;
@@ -50,10 +43,12 @@
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
     --loginPageBgUrl: url(theme.css);
     --loginPageText: "Inicia sesión";
+
+
+
     --blurSmallest: blur(2px);
     --blurDefault: blur(5px);
     --blurLarge: blur(10px);
-    --blurLargest: blur(20px);
 }
 
 html {
@@ -147,8 +142,8 @@ html {
 }
 
 .cardScalable {
-    border-radius: var(--largeRadius);
-    border: var(--borderColor) solid calc(2 * var(--borderWidth)) !important;
+    border-radius: var(--smallRadius);
+    border: 0 !important;
     overflow: hidden !important;
     transition: transform 125ms;
 }
