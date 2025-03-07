@@ -155,7 +155,7 @@ html {
 }
 
 .layout-mobile .cardScalable {
-    border: var(--defaultBorder) !important;
+    border: 0 !important;
 }
 
 .cardImageContainer {
@@ -610,7 +610,7 @@ html {
 }
 
 .layout-mobile .itemBackdrop {
-    margin-top: 3.5em;
+    margin-top: 0;
 }
 
 .layout-tv .itemBackdrop {
@@ -653,7 +653,7 @@ html {
 .skinHeader-blurred:not(.osdHeader),
 .appfooter {
     background-color: var(--headerColor) !important;
-    backdrop-filter: var(--blurDefault) !important;
+    backdrop-filter: var(--blurLargest) !important;
 }
 
 .headroom--unpinned {
@@ -664,7 +664,7 @@ html {
 .skinHeader:not(.osdHeader) {
     border-style: solid;
     border-width: 0 0 var(--borderWidth) 0;
-    border-color: var(--borderColor);
+    border-color: transparent;
     transition: all .375s ease-in-out;
 }
 
