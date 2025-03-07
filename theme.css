@@ -1,4 +1,4 @@
-/* Theme for Jellyfin by teleonline.org v7 */
+/* Theme for Jellyfin by teleonline.org v9 */
 /* jsDelivr CDN service’s base URL is https://cdn.jsdelivr.net/gh/{username}/{repo}/ */
 
 /* @import url("https://cdn.jsdelivr.net/gh/teleonlineorg/jellyfin/theme.css"); */
@@ -15,12 +15,12 @@
 
 :root {
     --elegantFinFooterText: "--";
-    --darkerGradientPoint: #080b12;
+    --darkerGradientPoint: #000;
     --darkerGradientPointAlpha: rgb(0 0 0 / 85%);
     --lighterGradientPoint: #0a0d12;
     --borderColor: rgb(39 39 39);
     --lighterBorderColor: rgb(255 255 255 / 20%);
-    --headerColor: rgba(30, 40, 54, 0.8);
+    --headerColor: rgb(8 11 18 / 20%) !important;
     --drawerColor: rgba(30, 40, 54, 0.9);
     --selectorBackgroundColor: rgb(0 0 0);
     --btnDeleteColor: rgb(169, 29, 29);
@@ -149,7 +149,7 @@ html {
 }
 
 .layout-mobile .cardScalable {
-    border: var(--defaultBorder) !important;
+    border: 0 !important;
 }
 
 .cardImageContainer {
@@ -373,12 +373,12 @@ html {
 }
 
 .detailLogo {
-    display: none;
+    display:none;
 }
 
 .detailPageWrapperContainer {
     padding-top: unset;
-    margin-top: unset;
+    margin-top: 5px;
 }
 
 .layout-mobile .detailPageWrapperContainer {
@@ -402,7 +402,7 @@ html {
 }
 
 .layout-mobile .detailPagePrimaryContainer {
-    background: linear-gradient(0deg, var(--darkerGradientPoint) 70%, transparent);
+    background: linear-gradient(359deg, var(--darkerGradientPoint) 38%, transparent);
 }
 
 .layout-desktop .detailPagePrimaryContainer {
@@ -435,6 +435,7 @@ html {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+display:none;
 }
 
 .paper-icon-button-light>.material-icons {
@@ -471,23 +472,22 @@ html {
 }
 
 .mediaInfoItem {
-    font-family: system-ui;
+    font-family: 'Inter', sans-serif;
     border-radius: var(--smallRadius);
-    font-size: .85em;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 300;
     padding-block: 0;
 }
 
 .mediaInfoOfficialRating {
     background: transparent !important;
-    font-size: .6em;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: normal;
+    font-size: 10px;
+    font-family: monospace;
+    line-height: 1;
     transform: translateY(-.15em);
-    padding-inline: .5em !important;
-    padding-block: .2em !important;
-    font-weight: 600;
-    border: var(--defaultBorder);
+    padding-inline: .9em !important;
+    padding-block: .3em !important;
+    border: 1px solid #797979;
 }
 
 .starIcon {
@@ -604,7 +604,7 @@ html {
 }
 
 .layout-mobile .itemBackdrop {
-    margin-top: 3.5em;
+    margin-top: 0;
 }
 
 .layout-tv .itemBackdrop {
@@ -622,11 +622,11 @@ h2 {
 }
 
 .tagline {
-    font-size: 1.3em;
-    font-weight: 400;
+font-size: 22px;
+    font-weight: 300;
     margin-bottom: 0;
     font-style: italic;
-    color: var(--textColor);
+    margin-top: -10px;
 }
 
 .nowPlayingPlaylist,
@@ -658,7 +658,7 @@ html {
 .skinHeader:not(.osdHeader) {
     border-style: solid;
     border-width: 0 0 var(--borderWidth) 0;
-    border-color: var(--borderColor);
+    border-color: transparent;
     transition: all .375s ease-in-out;
 }
 
@@ -878,10 +878,15 @@ progress+span {
 }
 
 .detail-clamp-text {
-    text-align: start;
-    color: var(--dimTextColor);
+text-align: start;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-weight: 200;
+    margin-top: 0;
+    font-size: 16px;
 }
-
 .itemMiscInfo {
     align-items: flex-end !important;
 }
@@ -1087,7 +1092,22 @@ div[data-isfolder="true"] .cardText-first+.itemSelectionPanel>.checkboxContainer
 [dir=ltr] .cardIndicators {
     right: .5em;
 }
-
+.itemName {
+    font-weight: 400;
+    margin: .5em 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: unset;
+    line-height: 1.1;
+    font-size: 20px;
+}
+.itemName.parentNameLast.withOriginalTitle {
+margin: 0 0px 10px;
+font-weight:bold;
+}
+.itemName.originalTitle {
+margin: 5px 0 10px;
+}
 .layout-mobile .cardIndicators {
     top: .2em;
     right: .2em;
@@ -1314,7 +1334,9 @@ div[data-role=controlgroup] a.ui-btn-active {
     overflow: hidden;
     color: var(--textColor);
 }
-
+.overview{
+font-weight: 300
+}
 .listItem-overview {
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -2097,6 +2119,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background-color: rgba(0, 0, 0, 0.5);
     max-height: unset;
     max-width: unset;
+}
+.itemExternalLinks {
+display:none;
 }
 
 #dialogToc .toc li {
