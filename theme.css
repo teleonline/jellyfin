@@ -770,8 +770,9 @@ progress+span {
 }
 
 .btnPlay.detailButton {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: var(--defaultLighterBorder);
+    background-color: rgb(255 255 255 / 20%);
+    border: 1px solid rgb(255 255 255 / 3%);
+    padding: .5em 4em !important;
 }
 
 .btnPlay>.detailButton-content {
