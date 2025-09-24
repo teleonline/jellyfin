@@ -6,6 +6,10 @@
   and provide a cleaner, more modern, and tailored visual experience.
 </p>
 
+<p style="color: #e63946; font-weight: bold;">
+  ⚠️ This theme is currently in <em>testing version</em> and may contain visual or styling issues.
+</p>
+
 <h2>🚀 How to use</h2>
 <ol>
   <li>Open the Jellyfin admin panel.</li>
